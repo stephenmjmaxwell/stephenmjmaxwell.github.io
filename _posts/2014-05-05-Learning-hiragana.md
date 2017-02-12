@@ -386,5 +386,4 @@ Wehi mo sesu
 <td></td>
 <td></td>
 </tr>
-</table>
 
