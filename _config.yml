@@ -5,7 +5,7 @@ url: "https://iinkky.github.io" # the base hostname & protocol for your site
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
   # Meta
-  title: 
+  title: Stephen
   avatar: avatar.png
   gravatar: # Email MD5 hash
   description: "Brain dump" # used by search engines
