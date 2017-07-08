@@ -20,3 +20,9 @@ common and often poorly answered, with people citing one or two popular resource
 than illustrating fully what is available. 
 
 ![Programming Resourc.es](/img/projects-pr.png)
+
+## Photos
+
+Just a collection of [Photos of things](http://stephenmaxwell.me/photos) 
+
+![Photos of things](/img/projects-ph.png)
