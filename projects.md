@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-feature-img: "img/feature-image.jpg"
+
 ---
 
 ## That Veterinary Guy
