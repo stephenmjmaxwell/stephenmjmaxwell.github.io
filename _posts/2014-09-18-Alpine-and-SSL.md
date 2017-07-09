@@ -13,11 +13,11 @@ I hope this blog post will help people who use both and don't validate their SSL
 Looking at `.pinerc` files on github and other places online for FastMail users you will see the following:
 
 {% highlight bash %}
-user-domain=mail.messagingengine.com
-inbox-path={mail.messagingengine.com/user=
-email@fastmail.fm/ssl/novalidate-cert}INBOX
-folder-collections={mail.messagingengine.com/
-user=email@fastmail.fm/ssl/novalidate-cert}INBOX.[]
+	user-domain=mail.messagingengine.com
+	inbox-path={mail.messagingengine.com/user=
+	email@fastmail.fm/ssl/novalidate-cert}INBOX
+	folder-collections={mail.messagingengine.com/
+	user=email@fastmail.fm/ssl/novalidate-cert}INBOX.[]
 {% endhighlight %}  
 
 
@@ -33,11 +33,11 @@ attack.
 What you would would like to see is:
 
 {% highlight bash %}
-user-domain=mail.messagingengine.com
-inbox-path={mail.messagingengine.com
-/user=email@fastmail.fm/ssl}INBOX
-folder-collections={mail.messagingengine.com
-/user=email@fastmail.fm/ssl}INBOX.[]
+	user-domain=mail.messagingengine.com
+	inbox-path={mail.messagingengine.com
+	/user=email@fastmail.fm/ssl}INBOX
+	folder-collections={mail.messagingengine.com
+	/user=email@fastmail.fm/ssl}INBOX.[]
 {% endhighlight %}  
 
 
@@ -48,7 +48,7 @@ I imagine this is why `novalidate-cert` is so common. To make this work we need 
 of copy of FastMail's SSL certificate to store locally. We can use OpenSSL to accomplish this.
 
 {% highlight bash %}
-openssl s_client -connect www.fastmail.fm:443
+	openssl s_client -connect www.fastmail.fm:443
 {% endhighlight %}  
 
 This will output a lot of certificate related information, most of which we don't need. 
@@ -59,7 +59,7 @@ the file will be renamed to. Hash values are used for naming so that matching ce
 easily be found on your system. We can use OpenSSL to find our hash value.
 
 {% highlight bash %}
-openssl x509 -in mail.fastmail.fm.pem -hash -noout
+	openssl x509 -in mail.fastmail.fm.pem -hash -noout
 {% endhighlight %}  
 
 
@@ -75,7 +75,7 @@ Now that we have our certificate, with it's correct name, we just need to know w
 To find out where OpenSSL keeps the certs folder on your system use the following:
 
 {% highlight bash %}
-openssl version -d
+	openssl version -d
 {% endhighlight %}  
 
 On Debian certificates are stored in `/usr/lib/ssl`. Once you have moved the certificate to your 

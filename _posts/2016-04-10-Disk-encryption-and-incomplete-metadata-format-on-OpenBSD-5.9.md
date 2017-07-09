@@ -20,7 +20,7 @@ Entering the shell and typing the following is required to setup full disk encry
     size: [39825135] *
     FS type: [4.2BSD] RAID
     > w
-    > q
+	> q
     No label changes.
 {% endhighlight %}  
 

@@ -1,11 +1,11 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: contact
+permalink: /contact/
 feature-img: "img/feature-image2.jpg"
 ---
 
-Hi,  
+  
 I am a [vet](https://en.wikipedia.org/wiki/Veterinary_physician) who likes learning. 
 
 You can get in touch by sending an email to 

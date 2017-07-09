@@ -75,7 +75,12 @@ dl,
 blockquote,
 code,
 kbd,
-pre,
+pre {
+        font-size: 95%;
+        color: #b8b8b8;
+        line-height: 1.5;
+		margin-bottom: 1em;
+}
 samp {
   margin: 1em 0;
 }
