@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Dracula theme for the Quassel IRC client
+title:  Dracula theme for Quassel
 
 ---
 
