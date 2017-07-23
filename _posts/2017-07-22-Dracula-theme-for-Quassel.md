@@ -4,7 +4,7 @@ title:  Dracula theme for Quassel
 
 ---
 
-I use [Quassel](http://www.quassel-irc.org/) as my client for [IRC](https://en.wikipedia.org/wiki/Internet_Relay_Chat). This morning I decided to make a theme using [Dracula's](https://draculatheme.com/) colour palette.
+I use [Quassel](http://www.quassel-irc.org/) as my client for [IRC](https://en.wikipedia.org/wiki/Internet_Relay_Chat). This morning I decided to make a theme for it using [Dracula's](https://draculatheme.com/) colour palette.
 
 ![Theme screenshot window](/img/2017-07-22-screenshot.png)
 
