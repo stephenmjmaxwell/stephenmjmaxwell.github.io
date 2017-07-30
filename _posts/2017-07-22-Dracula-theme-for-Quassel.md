@@ -14,6 +14,4 @@ I have some UI elements hidden to look like this; menu bar (Ctrl + M), main tool
 
 You can grab a copy of my theme [here](https://github.com/iinkky/Dracula-Quassel-Theme/blob/master/Dracula.qss).
 
-![Theme screenshot full](/img/2017-07-22-screenshot-full.png)
-
 Obligatory [xkcd](https://xkcd.com/1782/).

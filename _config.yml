@@ -1,74 +1,16 @@
-# SITE CONFIGURATION
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://iinkky.github.io" # the base hostname & protocol for your site
+# Site settings
+title: "stephen"
+description: ""
+baseurl: "" # begin with /repo-name if use as project, else leave empty for gh-pages
+url: "" # default is empty
+author: ""
 
-# THEME-SPECIFIC CONFIGURATION
-theme_settings:
-  # Meta
-  title: stephen
-  avatar: avatar.png
-  gravatar: # Email MD5 hash
-  description: "Brain dump" # used by search engines
+# Build settings
+kramdown:
+  input: GFM
+permalink: pretty
 
-  # Header and footer text
-  header_text: 
-  header_text_feature_image:
-  footer_text: >
-   Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
-
-  # Icons
-  rss: false
-  email_address: 
-
-  behance:
-  bitbucket:
-  dribbble:
-  facebook:
-  flickr:
-  github: 
-  google_plus:
-  instagram:
-  linkedin:  # Full URL
-  pinterest:
-  reddit:
-  soundcloud:
-  stack_exchange:  # Full URL
-  steam:
-  tumblr:
-  twitter:
-  wordpress:
-  youtube:
-
-  # Scripts
-  google_analytics: # Tracking ID, e.g. "UA-000000-01"
-  disqus_shortname:
-  muut_community_name: # From muut.com settings, e.g. "muttcommunityname"
-  katex: true # Enable if using math markup
-
-  # Localization strings
-  str_follow_on: "Follow on"
-  str_rss_follow: "Follow RSS feed"
-  str_email: "Email"
-  str_next: "Next"
-  str_prev: "Prev"
-  str_continue_reading: "Continue reading"
-
-  # Colours, typography and padding
-  # Open the "_sass > base" folder, and open "_variables.scss"
-
-  # Post navigation
-  post_navigation: false
-
-# PAGINATION
-paginate: 5
-paginate_path: "blog/page:num"
-
-# BUILD SETTINGS
-markdown: kramdown
-highlighter: rouge
-sass:
-  sass_dir: _sass
-  style: :compressed
-gems: 
-  - jekyll-paginate
-  - jekyll-feed
+# Third-party services
+# just leave empty to disable it
+google_analytics:
+disqus_shortname:

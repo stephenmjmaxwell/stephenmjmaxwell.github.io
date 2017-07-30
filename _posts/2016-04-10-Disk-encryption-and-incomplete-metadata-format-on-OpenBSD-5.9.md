@@ -6,10 +6,10 @@ title: Disk encryption and incomplete metadata format on OpenBSD 5.9
 This is a brief run down of a user error during full disk encryption on [OpenBSD](https://en.wikipedia.org/wiki/OpenBSD) that 
 causes the return of `softraid0: Invalid metadata format`.
 
-As the manual illustrates encryption is handled by [`softraid`](http://man.openbsd.org/softraid) and [`bioctl`](http://man.openbsd.org/OpenBSD-6.0/bioctl.8) and should be performed at boot install. 
+As the manual illustrates encryption is handled by [softraid](http://man.openbsd.org/softraid) and [bioctl](http://man.openbsd.org/OpenBSD-6.0/bioctl.8) and should be performed at boot install. 
 Entering the shell and typing the following is required to setup full disk encryption:
 
-{% highlight BW %}
+{% highlight bash %}
     # fdisk -iy sd0
     Writing MBR at offset 0.
 
@@ -27,19 +27,19 @@ Entering the shell and typing the following is required to setup full disk encry
 At this point I kept getting my error because I didn’t type **RAID** at `FS type`. Instead I typed enter which normally selects the default configuration in the OpenBSD installer.  
 So when I proceeded to use the standard `bioctl` command:  
 
-{% highlight BW %}
+{% highlight bash %}
     # bioctl -cC -l sd0a softraid0
 {% endhighlight %}  
 
 I was getting a `softraid` error about an incorrect metadata format.
 
-{% highlight BW %}
+{% highlight bash %}
     softraid0: Invalid metadata format
 {% endhighlight %}  
 
 Once this was fixed I could move on to the next steps. You need to choose a custom layout for the disk and then do the following with disklabel making sure you have selected the correct mount point.
 
-{% highlight BW %}
+{% highlight bash %}
     > a a
     offset: [64]
     size: [6265286] *
