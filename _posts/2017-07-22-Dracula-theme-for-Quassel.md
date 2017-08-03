@@ -12,6 +12,6 @@ Quassel's default colour scheme and other available [styles](http://bugs.quassel
 
 I have some UI elements hidden to look like this; menu bar (Ctrl + M), main toolbar, status bar, show icons, show nick selector and show style buttons. I am using the 'Fusion' client style but some of the others work well too. The client now fits much better into the overall desktop.
 
-You can grab a copy of my theme [here](https://github.com/iinkky/Dracula-Quassel-Theme/blob/master/Dracula.qss).
+You can grab a copy of my theme [here](https://github.com/dracula/quassel/blob/master/Dracula.qss).
 
 Obligatory [xkcd](https://xkcd.com/1782/).
