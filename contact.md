@@ -5,7 +5,5 @@ permalink: /contact/
 
 ---
 
-
-You can get in touch by sending an email to 
-
-[<span style="unicode-bidi: bidi-override; direction: rtl;">em.llewxamnehpets@nehpets</span>](mailto:)
+Email: [<span style="unicode-bidi: bidi-override; direction: rtl;">em.llewxamnehpets@nehpets</span>](mailto:)
+Github: [iinkky](https://www.github.com/iinkky)
