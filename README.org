@@ -1,0 +1,4 @@
+This is my personal blog Powered by emacs org-mode.
+
+
+Previously used it was powered by [[http://jekyllrb.com/][Jekyll]] with [[https://rohanchandra.github.io/project/type/][Type Theme]] and [[http://github.com/heiswayi/textlog][Textlog Theme]].
