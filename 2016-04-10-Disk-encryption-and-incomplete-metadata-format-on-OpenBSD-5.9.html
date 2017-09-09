@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title><code>stephen</code></title>
-<!-- 2017-09-09 Sat 10:40 -->
+<title>Disk encryption and incomplete metadata format on OpenBSD 5.9</title>
+<!-- 2017-09-09 Sat 10:00 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="Org-mode">
@@ -192,64 +192,97 @@ $(function() {
 </head>
 <body>
 <div id="content" class="container">
-<div class="row"><div class="col-md-9"><h1 class="title"><code>stephen</code></h1>
+<div class="row"><div class="col-md-9"><h1 class="title">Disk encryption and incomplete metadata format on OpenBSD 5.9</h1>
+<p>
+This is a brief run down of a user error during full disk encryption on <a href="https://en.wikipedia.org/wiki/OpenBSD">OpenBSD</a> that 
+causes the return of <code>softraid0: Invalid metadata format</code>.
+</p>
 
-<div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">Contact</h2>
-<div class="outline-text-2" id="text-1">
-</div><div id="outline-container-sec-1-0-1" class="outline-4">
-<h4 id="sec-1-0-1">Email: stephen [at] stephenmaxwell.me</h4>
-</div>
-<div id="outline-container-sec-1-0-2" class="outline-4">
-<h4 id="sec-1-0-2">Github: <a href="https://www.github.com/iinkky">iinkky</a></h4>
-</div>
-<div id="outline-container-sec-1-0-3" class="outline-4">
-<h4 id="sec-1-0-3">Matrix: <a href="https://matrix.to/#/@inkky:matrix.org">@inkky:matrix.org</a></h4>
-</div>
-</div>
+<p>
+As the manual illustrates encryption is handled by <a href="http://man.openbsd.org/softraid">softraid</a> and <a href="http://man.openbsd.org/OpenBSD-6.0/bioctl.8">bioctl</a> and should be performed at boot install. 
+Entering the shell and typing the following is required to setup full disk encryption:
+</p>
 
 
-<div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2">Blog</h2>
-<div class="outline-text-2" id="text-2">
-</div><div id="outline-container-sec-2-0-1" class="outline-4">
-<h4 id="sec-2-0-1"><a href="2017-07-22-Dracula-theme-for-Quassel.html">Dracula theme for Quassel</a></h4>
-</div>
-<div id="outline-container-sec-2-0-2" class="outline-4">
-<h4 id="sec-2-0-2"><a href="2016-04-10-Disk-encryption-and-incomplete-metadata-format-on-OpenBSD-5.9.html">Disk encryption and incomplete metadata format on OpenBSD 5.9</a></h4>
-</div>
-<div id="outline-container-sec-2-0-3" class="outline-4">
-<h4 id="sec-2-0-3"><a href="2014-09-18-Alpine-and-SSL.html">Validating SSL in Alpine</a></h4>
-</div>
-<div id="outline-container-sec-2-0-4" class="outline-4">
-<h4 id="sec-2-0-4"><a href="2014-05-05-Learning-hiragana.html">Learning Hiragana</a></h4>
-</div>
+<div class="org-src-container">
+
+<pre class="src src-sh"># fdisk -iy sd0
+Writing MBR at offset 0.
+
+# disklabel -E sd0
+Label editor (enter '?' for help at any prompt)
+&gt; a a
+offset: [2104515]
+size: [39825135] *
+FS type: [4.2BSD] RAID
+&gt; w
+&gt; q
+No label changes.
+</pre>
 </div>
 
 
-<div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3">Other websites</h2>
-<div class="outline-text-2" id="text-3">
-</div><div id="outline-container-sec-3-0-1" class="outline-4">
-<h4 id="sec-3-0-1"><a href="http://thatveterinaryguy.co.uk">thatveterinaryguy.co.uk</a></h4>
+<p>
+At this point I kept getting my error because I didn’t type <b><b>RAID</b></b> at <code>FS type</code>. Instead I typed enter which normally selects the default configuration in the OpenBSD installer.  
+So when I proceeded to use the standard <code>bioctl</code> command:  
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh"># bioctl -cC -l sd0a softraid0
+</pre>
 </div>
-<div id="outline-container-sec-3-0-2" class="outline-4">
-<h4 id="sec-3-0-2"><a href="http://programmingresourc.es">programmingresourc.es</a></h4>
+
+<p>
+I was getting a <code>softraid</code> error about an incorrect metadata format.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh">softraid0: Invalid metadata format
+</pre>
 </div>
+
+<p>
+Once this was fixed I could move on to the next steps. You need to choose a custom layout for the disk and then do the following with disklabel making sure you have selected the correct mount point.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh">&gt; a a
+offset: [64]
+size: [6265286] *
+FS type: [4.2BSD]
+mount point: [none] /
+Rounding size to bsize (32 sectors): 6265280
+&gt; w
+&gt; q
+</pre>
 </div>
-</div><div class="col-md-3"><nav id="table-of-contents">
-<div id="text-table-of-contents" class="bs-docs-sidebar">
-<ul class="nav">
-<li><a href="#sec-1">Contact</a></li>
-<li><a href="#sec-2">Blog</a></li>
-<li><a href="#sec-3">Other websites</a></li>
-</ul>
-</div>
-</nav>
-</div></div></div>
+
+<p>
+Now you should be asked for a password to secure your encrypted
+drive. <a href="https://www.xkcd.com/936/">Make sure you pick a strong one.</a>  
+</p>
+
+<hr >
+
+<blockquote>
+<p>
+The world doesn't live off jam and fancy perfumes - it lives off bread and meat and potatoes. 
+Nothing changes. All the big fancy stuff is sloppy stuff that crashes. I don't need dancing 
+baloney - I need stuff that works. That's not as pretty, and just as
+hard.
+</p>
+
+<p>
+<i>Theo de Raadt</i>
+</p>
+</blockquote>
+</div><div class="col-md-3"></div></div></div>
 <footer id="postamble" class="">
 <div><p class="author">Author: Stephen Maxwell</p>
-<p class="date">Created: 2017-09-09 Sat 10:40</p>
+<p class="date">Created: 2017-09-09 Sat 10:00</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.2.1 (<a href="http://orgmode.org">Org-mode</a> 9.1)</p>
 </div>
 </footer>
