@@ -1,5 +1,5 @@
 
-#+TITLE: =stephen=
+#+TITLE: [[file:index.html][=stephen=]]
 #+AUTHOR:    Stephen Maxwell
 #+OPTIONS: whn:nil
 #+LINK_HOME: http://stephenmaxwell.me
@@ -7,22 +7,19 @@
 * Contact
 
 *** Email: stephen [at] stephenmaxwell.me
-*** Github: [[https://www.github.com/iinkky][iinkky]]
-*** Matrix: [[https://matrix.to/#/@inkky:matrix.org][@inkky:matrix.org]]
+*** Github: [[https://www.github.com/stephenmjmaxwell][stephenmjmaxwell]]
 
 
 * Blog
-
-*** [[file:2017-07-22-Dracula-theme-for-Quassel.org][Dracula theme for Quassel]]
-*** [[file:2016-04-10-Disk-encryption-and-incomplete-metadata-format-on-OpenBSD-5.9.org][Disk encryption and incomplete metadata format on OpenBSD 5.9]]
-*** [[file:2014-09-18-Alpine-and-SSL.org][Validating SSL in Alpine]]
-*** [[file:2014-05-05-Learning-hiragana.org][Learning Hiragana]]
+*** [[file:21-10-2018-Bad-openings-damiano-defence.org][Bad openings: Damiano Defence]]
+*** [[file:08-11-2018-History-of-here.org][History of here]]
+*** [[file:22-07-2017-Dracula-theme-for-Quassel.org][Dracula theme for Quassel]]
+*** [[file:10-04-2016-Disk-encryption-and-incomplete-metadata-format-on-OpenBSD-5.9.org][Disk encryption and incomplete metadata format on OpenBSD 5.9]]
+*** [[file:18-09-2014-Alpine-and-SSL.org][Validating SSL in Alpine]]
+*** [[file:05-05-2014-Learning-hiragana.org][Learning Hiragana]]
 
 
 * Other websites
 
 *** [[http://thatveterinaryguy.co.uk][thatveterinaryguy.co.uk]] 
 *** [[http://programmingresourc.es][programmingresourc.es]]
-
-
-

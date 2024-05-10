@@ -1,0 +1,90 @@
+#+TITLE: [[file:index.html][=stephen=]] \\
+#+AUTHOR:    Stephen Maxwell
+#+OPTIONS: whn:nil
+#+LINK_HOME: http://stephenmaxwell.me
+
+* Validating SSL in Alpine
+/18-09-2014/
+
+* What is Alpine
+
+[[http://www.washington.edu/alpine/][Alpine]] is a terminal email client that I use with [[https://www.fastmail.com/][FastMail]]'s email service. 
+I hope this blog post will help people who use both and don't validate their SSL certificates.
+
+#+CAPTION: Tiling window manager with Alpine
+[[./img/2014-09-18-alpine.png]]
+
+Looking at ~.pinerc~ files on GitHub and other places online for FastMail users you will commonly see the following configuration:
+
+#+BEGIN_SRC sh
+	user-domain=mail.messagingengine.com
+	inbox-path={mail.messagingengine.com/user=
+	email@fastmail.fm/ssl/novalidate-cert}INBOX
+	folder-collections={mail.messagingengine.com/
+	user=email@fastmail.fm/ssl/novalidate-cert}INBOX.[]
+#+END_SRC
+\\
+
+* The interesting part
+
+In the above configuration you can see a ~novalidate-cert~ after ssl. With this configuration a 
+connection is made to FastMail's server via SSL, but the certificate is not validated. This provides 
+encryption but not authentication. Your connection will be encrypted, so no plain text for coffee 
+shop packet sniffers, but you can't be sure it is FastMail's server you are connecting to. This 
+exposes you to a [[https://en.wikipedia.org/wiki/Man-in-the-middle_attack][MiTM]] (man-in-the-middle) 
+attack.
+
+What you would prefer to see is:
+
+#+BEGIN_SRC sh
+	user-domain=mail.messagingengine.com
+	inbox-path={mail.messagingengine.com
+	/user=email@fastmail.fm/ssl}INBOX
+	folder-collections={mail.messagingengine.com
+	/user=email@fastmail.fm/ssl}INBOX.[]
+#+END_SRC
+
+\\
+* Getting our certificate
+
+If you try to use the above configuration without additional steps, you will encounter an error.  
+This is likely why ~novalidate-cert~ is so common. To make this work we need to grab 
+of copy of FastMail's SSL certificate to store locally. We can achieve this using OpenSSL.
+
+#+BEGIN_SRC 
+	openssl s_client -connect www.fastmail.fm:443
+#+END_SRC
+
+This will output a lot of certificate-related information, most of which we don't need. 
+The part which begins ~-----BEGIN CERTIFICATE-----~ and ends with ~-----END CERTIFICATE-----~ 
+is what we need to copy. Copy this to a ~.pem~ file such as mail.fastmail.fm.pem.
+This is a temporary name; we need to determine the hash value of this certificate to rename it appropriately.
+Hash values are used for naming so that matching certificates can 
+easily be found on your system. We can use OpenSSL to find our hash value.
+
+#+BEGIN_SRC 
+	openssl x509 -in mail.fastmail.fm.pem -hash -noout
+#+END_SRC
+
+This will return an 8 character hash value such as 'e656db79'. This is what we will name our .pem 
+file but with one alteration. We will add a suffix; a number indicating whether or not we have 
+more than one copy of this certificate. It is likely this will be the first copy, so in this case 
+we will append a 0, resulting in 'e656db79.0'.
+
+\\
+
+* Moving the certificate to the right location
+
+Now that we have our certificate with the correct name, we need to place it in the appropriate directory. 
+To find out where OpenSSL stores certificates on your system, use the following command:
+
+#+BEGIN_SRC 
+	openssl version -d
+#+END_SRC
+
+
+On Debian, certificates are stored in ~/usr/lib/ssl~. Once you have moved the certificate to your 
+SSL certificates directory and start alpine you should be greeted with a login dialog.
+
+\\
+

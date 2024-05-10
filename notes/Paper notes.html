@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-05-10 Fri 19:49 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Paper Notes</title>
+<meta name="author" content="Stephen Maxwell" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Paper Notes</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org1fa5e17">1. Abstracts</a></li>
+<li><a href="#org37936fa">2. Alopecia</a></li>
+<li><a href="#org9d62abe">3. An and claw</a></li>
+<li><a href="#org603e507">4. Atopy</a>
+<ul>
+<li><a href="#org11f963f">4.1. Allergen Specific Immunotherapy</a>
+<ul>
+<li><a href="#org738c6a1">4.1.1. 2022 Efficacy of subcutaneous allergen immunotherapy in atopic dogs: A retrospective study of 664 cases</a></li>
+</ul>
+</li>
+<li><a href="#org5357db9">4.2. Canine Atopic Dermatitis (cAD)</a>
+<ul>
+<li><a href="#org7b8cac6">4.2.1. 2023 Update on the role of genetic factors, environmental factors and allergens in canine atopic dermatitis 2023 ICADA</a></li>
+<li><a href="#orgb2de35f">4.2.2. 2015 Treatment of canine atopic dermatitis: 2015 updated guidelines from the International Committee on Allergic Diseases of Animals (ICADA)</a></li>
+</ul>
+</li>
+<li><a href="#org74c7ccb">4.3. Feline Atopic Syndrome (FAS)</a>
+<ul>
+<li><a href="#org0a02e3e">4.3.1. 2021 Treatment of the feline atopic syndrome – a systematic review Ralf Mueller, Tim Nuttall et al</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org3f6a259">5. Bacteria</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1fa5e17" class="outline-2">
+<h2 id="org1fa5e17"><span class="section-number-2">1.</span> Abstracts</h2>
+</div>
+<div id="outline-container-org37936fa" class="outline-2">
+<h2 id="org37936fa"><span class="section-number-2">2.</span> Alopecia</h2>
+</div>
+<div id="outline-container-org9d62abe" class="outline-2">
+<h2 id="org9d62abe"><span class="section-number-2">3.</span> An and claw</h2>
+</div>
+<div id="outline-container-org603e507" class="outline-2">
+<h2 id="org603e507"><span class="section-number-2">4.</span> Atopy</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org11f963f" class="outline-3">
+<h3 id="org11f963f"><span class="section-number-3">4.1.</span> Allergen Specific Immunotherapy</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-org738c6a1" class="outline-4">
+<h4 id="org738c6a1"><span class="section-number-4">4.1.1.</span> 2022 Efficacy of subcutaneous allergen immunotherapy in atopic dogs: A retrospective study of 664 cases</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<ul class="org-ul">
+<li>cAD affects around 10% of dogs</li>
+<li>Dogs treated with steroids showed poorer response</li>
+<li>Sucessful ASIT results in modulation of T- and B-cell responses, increased T-regs, skewing of specific-antibody isotopes from IgE to IgG, as well as inhibition of migration of eosinophils, basophils and mast cells to tissues and release of their mediators.</li>
+<li>Largest study investigating efficacy in atopic dogs</li>
+<li>For ASIT to be successful, an early desensitisation of mast cells and basophils, a reduction of type 2 helper T-­cells and an induction of interleukin (IL)-10-secreting inducible regulatory T and B cells seems to be necessary.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org5357db9" class="outline-3">
+<h3 id="org5357db9"><span class="section-number-3">4.2.</span> Canine Atopic Dermatitis (cAD)</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-org7b8cac6" class="outline-4">
+<h4 id="org7b8cac6"><span class="section-number-4">4.2.1.</span> 2023 Update on the role of genetic factors, environmental factors and allergens in canine atopic dermatitis 2023 ICADA</h4>
+<div class="outline-text-4" id="text-4-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgc2b9d60"></a>Current evidence on the role of genetic and environmental factors and allergic sensitisation since last review update since last review 2015<br />
+<ol class="org-ol">
+<li><a id="orgd16052e"></a>Genetics<br />
+<div class="outline-text-6" id="text-4-2-1-1-1">
+<ul class="org-ul">
+<li>Canine atopic dermatitis (cAD) is a hereditary, generally pruritic and predominantly T-cell-driven inflammatory skin disease, involving an interplay between skin barrier abnormalities, allergen sensitisation and microbial dysbiosis</li>
+<li>7 GWAS (genome wide linkage and association studies) and one candidate genere study</li>
+<li>Filaggrin mutations not detected in three studies of WHWT but it was implicated in a group of Labrador retrievers in the UK but not from other locations.</li>
+<li>A GWAS identified two SNPs associated with AD</li>
+<li>GSD gene sequence on plakophilin 2 but followup study disputed because no diff between AD and control dogs</li>
+<li>Only two GWAs since ICADA 2015 WHWTs genes</li>
+</ul>
+</div>
+</li>
+<li><a id="orgc614c30"></a>Environment<br />
+<div class="outline-text-6" id="text-4-2-1-1-2">
+<ul class="org-ul">
+<li>Protective factors - growing up in a rural environment with contact to farm animals, a diet rich in dietary fibre, high food diversity and early contact with siblings and peers.</li>
+</ul>
+</div>
+</li>
+<li><a id="orgae1e8b6"></a>Parasites<br />
+<div class="outline-text-6" id="text-4-2-1-1-3">
+<ul class="org-ul">
+<li>Two recent studies invetsigated the relationship between Toxocara canis and cAD - T. canis infections may helpd against development of cAD?</li>
+<li>lab beagles - 6 controls and 6 infected with T. canis - experimentally sensitised to D. farinae - Infected dogs higher decrease lesional scores and shorted pruritus after D. farinae challenge - suggests T. canis infections may have protective effect against D. farinae-induced cAD flares</li>
+</ul>
+</div>
+</li>
+<li><a id="orga6a17ac"></a>Allergens<br />
+<div class="outline-text-6" id="text-4-2-1-1-4">
+<ul class="org-ul">
+<li>House dust mite the most common.</li>
+<li>High rate of cross reactivity between house dust mitr and storage mites, ectoparasites and sarcoptic mites may explain false positives in allergy testing.</li>
+</ul>
+</div>
+</li>
+<li><a id="orga48a2ef"></a>Summary<br />
+<div class="outline-text-6" id="text-4-2-1-1-5">
+<ul class="org-ul">
+<li>Although five breeds (boxer, bulldog, Labrador retriever, pug and WHWT) are considered as predisposed worldwide prevalent varies</li>
+<li>Several miRNAs have been identified in recent years that have been shown to play a role in the regulation of gene expression in immune</li>
+</ul>
+<p>
+cells and keratinocytes at the post-transcriptional level.
+</p>
+<ul class="org-ul">
+<li>rural environment, multi-animal household, walking in forests, fields and beaches, having been born in the current owner's household, living in a detached house and being fed a nonprocessed meat-based diet, may be associated with a decreased risk of cAD.</li>
+<li>House dust mite most common cause worldwide</li>
+</ul>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgb2de35f" class="outline-4">
+<h4 id="orgb2de35f"><span class="section-number-4">4.2.2.</span> 2015 Treatment of canine atopic dermatitis: 2015 updated guidelines from the International Committee on Allergic Diseases of Animals (ICADA)</h4>
+<div class="outline-text-4" id="text-4-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="org2842abb"></a>Acute<br />
+<div class="outline-text-5" id="text-4-2-2-1">
+<ul class="org-ul">
+<li>Oral type 1 antihistamines might provide a small and limited benefit in some dogs with AD (SOR B).</li>
+<li>Due to their mode of action and for an optimal benefit, oral type 1 antihistamines should preferably be given before a flare occurs to block the effects of histamine (SOR C). Clinical benefit might also occur due to the sedative effect of first generation type 1 antihistamines (e.g. diphenhydramine, chlorpheniramine…) (SOR C). Due to their limited efficacy, type 1 antihistamines are likely to be more beneficial in dogs with mild AD (SOR C). There is no evidence supporting the use of topical type 1 antihistamine formulations to treat canine AD (SOR C).</li>
+<li>Oral EFAs are not useful to treat acute flares of AD due to the length of time needed for any possible beneficial effect to occur.</li>
+</ul>
+</div>
+</li>
+<li><a id="org90b2407"></a>Chronic<br />
+<div class="outline-text-5" id="text-4-2-2-2">
+<ul class="org-ul">
+<li>Dogs with AD should be treated year-round with an effective flea control regimen.</li>
+<li>Supplementation with oral EFAs Summary of 2010 guidelines: The oral intake of EFAs, especially those rich in omega-6 EFAs either as supplement or in enriched diets can influence superficial skin lipids and improve the gloss and quality of the coat. Oral EFAs might also provide some small benefit in reducing clinical signs of AD in dogs, but the limited degree of improvement expected makes it unlikely that EFA supplementation would be suitable for monotherapy of canine AD. The benefit of EFAs, if any, might not be seen before two months of supplementation. At this time, there is no evidence of superiority for any particular EFA combination, dosage, ratio or formulation (including enriched diets) to improve skin and coat quality in dogs with AD. In general, EFA-enriched diets provide higher amounts of EFAs than oral administration.</li>
+<li>Topical lipid formulations can help normalize existing stratum corneum lipid barrier defects in dogs with AD (SOR C). Because of inconsistency in outcomes of clinical trials, there is still insufficient evidence for the benefit of lipid-containing topical formulations to recommend these as monotherapy for canine AD (SOR B). The benefit, cost and ease of use of topical EFA-containing formulations as adjuvant therapy for canine AD must be weighed against those of feeding oral EFA supplements or enriched diets (SOR C). The benefit of topical EFA- containing formulations is likely minimal in dogs already fed EFA-rich diets or EFA supplements (SOR C).</li>
+<li>As orally administered EFAs can normalize stratum corneum lipid in the same way as a topical lipid mixture (QOE 3) [36–38], the addition of topical EFA-containing formulations to dogs already fed high levels of EFAs is likely to provide little added benefit.</li>
+<li>In a 12-week RCT, a hydrocortisone aceponate spray (Cortavance, Virbac) showed a similar efficacy and tolerance compared to oral ciclosporin (Atopica, Elanco Animal Health) (QOE 1).</li>
+<li>Masitinib (Masivet/Kinavet, AB Science) appears to offer some benefit in dogs with chronic AD, but this effect must be weighed against the risk of severe renal adverse drug events that requires the performance of periodic urinalyses to detect developing proteinuria (SOR A). Masitinib might be a useful alternative for atopic dogs with signs not responding to other approved drugs (SOR C). A large RCT confirmed that masitinib at 12.5 mg/kg once daily was moderately effective in reducing clinical signs in atopic dogs. The development of a protein-losing nephropathy in some dogs, which, if unrecognized could be potentially fatal, is a limitation of masitinib treatment.</li>
+<li>An open RCT study evaluating pentoxifylline at the high dose of 20 mg/kg three times daily, either alone or in combination with oral EFA supplementation, reported a significantly greater improvement in skin lesions and pruritus of these interventions over placebo; the effect seemed highest for dogs treated with the combination of pentoxifylline and EFAs (QOE 2).</li>
+<li>Updated 2015 recommendations: There is currently insufficient evidence supporting the use of oral probiotics as nonspecific immunotherapy for prevention.</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org74c7ccb" class="outline-3">
+<h3 id="org74c7ccb"><span class="section-number-3">4.3.</span> Feline Atopic Syndrome (FAS)</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+<div id="outline-container-org0a02e3e" class="outline-4">
+<h4 id="org0a02e3e"><span class="section-number-4">4.3.1.</span> 2021 Treatment of the feline atopic syndrome – a systematic review Ralf Mueller, Tim Nuttall et al</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<ul class="org-ul">
+<li>In this review, there was good evidence for the efficacy of systemic gluco- corticoids and ciclosporin, and limited evidence for the efficacy of topical glucocorticoids, oclacitinib and allergen-specific immunotherapy in feline atopic skin syndrome.
+<ul class="org-ul">
+<li>Evidence pointed to low-to-moderate efficacy for antihis-tamines, fatty acids and palmitoyl ethanolamide.</li>
+</ul></li>
+<li>Feline asthma, there was good evidence for the efficacy of oral and inhaled glucocorticoids, and limited evidence of moderate efficacy for allergen-specific immunotherapy.</li>
+<li>reaction patterns include miliary dermatitis, self-induced alopecia/hypotrichosis, the eosinophilic granuloma complex (eosinophilic granuloma, eosinophilic plaque, indolent ulcer) and/or excoriations-ulcers on the head and neck.</li>
+<li><b>ASIT</b> Recommendations seems to be an efficacious therapy for FASS (QOE 2; SOR B). However, some studies were presented only as abstracts with very limited information,23,25 none of the studies were controlled or randomised, and all were characterised by unclear outcome measures, making final assessment difficult. By contrast, there is evidence of moderate-to-good efficacy of ASIT in naturally occurring feline asthma (QOE 2; SOR B) and moderate efficacy of RIT in cats with experimental asthma.</li>
+<li><b>Systemic glucocorticoids</b> Recommendations are rapid and effective in most cats with FASS (QOE 1; SOR A). Treatment with 1.4–1.5 mg/kg once daily of methylprednisolone-induced remission in 33 of 36 cats within 14 days.</li>
+<li>By contrast, 1 mg/kg once daily of prednisolone (approximately 50% of the above dosages) was much less effective.</li>
+<li>Once in remis-sion, treatment can be tapered to the lowest and least frequent dosage that maintains remission (QOE 1; SOR A). On average, this equated to 20–25% of the starting dosage.</li>
+<li>Feline asthma - good evidence for clinical efficacy of glucocorticoids - based on experiementaly sensitised cats</li>
+<li>Topical (HCA) rapidly effective in some cats</li>
+<li>Recommendations <b>ciclosporin</b> - GI signs most common +/- anorexcia and weight loss. Gingival hyperplasia rare.</li>
+<li>Based on the available evidence in a large number of cats with FASS, ciclosporin at a dose of 7 mg/kg once daily is efficacious in the treatment of reaction patterns caused by FASS (QOE 1; SOR A). Insuffience evidence for asthma. If get <i>Toxoplasma Gondii</i> while on treatment can get more severe signs.</li>
+<li>Recommendations <b>Oclacitinib</b> - overall good response with 1 mg/kg once or twice daily - limited evidence for asthma</li>
+<li>Recommendations <b>Bronchodilators</b> - frequently mentioned but no evidence.</li>
+<li>Recommendations <b>H1-receptor blocking antihistamines</b> - well tolerated - 2.37 sedation with chlorphenamine,. Advised effects in 11 of 10 with cyprohepatadine. Oral antihistamines could provide a small and limited benefit in some cats with FASS and this is not likely to result in good-to-excellent response in most cases (QOE 2; SOR B). The available evidence supports the use of chlorphenamine as a first-line H1R-antihis-tamine (QOE 2; SOR B).</li>
+<li>No evidence for use in cats with asthma</li>
+<li>Recommendations <b>Essential fatty acids and palmitoylethanolamide</b> - limited evidence for moderate efficacy of EFA supplmentation in cats with milary dermatitis. Moderate devidence for PEAum in FASS. Insufficient evidence for both in feline asthma.</li>
+<li>Recommendations <b>Maropitant</b> - one study 2mg/kg orally SID for 4 weeks. Increase salivation. Limited evidence of good efficacy in FASS. No evidence in asthma.</li>
+<li><b>Antibiotics</b> - amoxiclav significantly reduced mean lesion size of eosinophilic plaques (96%) and indolent ulcers (43%) compared to placebo. These cats diagnosed with secondary bacterial infections. In cats with asthma 4 days of doxycycline did not influence asthamtic response.</li>
+<li>Guidelines recommend topical over systemic were possible.</li>
+<li><b>Inhaled lidocaine</b> - one study, lidocaine may serve as adjunctive therapy in feline asthmatics with mild beneficial effects on airflow obstruction (QOE2; SOR B).</li>
+<li><b>Mesenchymal stem cell therapy</b> - limited evidence of mild-to-moderate long-term efficacy of MSC in the treatment of feline asthma (QOE2; SOR B).</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org3f6a259" class="outline-2">
+<h2 id="org3f6a259"><span class="section-number-2">5.</span> Bacteria</h2>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Stephen Maxwell</p>
+<p class="date">Created: 2024-05-10 Fri 19:49</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
