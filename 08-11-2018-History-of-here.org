@@ -24,7 +24,7 @@ It started almost a decade ago with a one-click WordPress setup in DreamHost.  I
 I had started using markdown and felt this would be my saviour. ‘It will force me to focus on writing since design and the website internals would be separate from posts’. So I switched from static html to a static site generator that utilised markdown called Jekyll. No more embedded HTML when writing. Just plain beautiful markdown. I made an ugly website called thatveterinaryguy.co.uk with Jekyll.
 
 #+HTML: <br>
-#+CAPTION:thatveterinayrguy.co.uk using Jekyll
+#+CAPTION:thatveterinaryguy.co.uk using Jekyll
 #+attr_html: :width 500px
 [[./img/projects-tvg.png]]
 #+HTML: <br>
