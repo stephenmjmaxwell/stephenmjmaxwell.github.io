@@ -1,0 +1,279 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="shortcut icon" href="img/favicon.ico">
+		<!-- Custom CSS -->
+		<link href="css/clean-blog.css" rel="stylesheet">
+		<style media="screen" type="text/css">
+		@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+		@font-face {
+			font-family: 'icomoon';
+			src:url('../fonts/icomoon2.eot');
+			src:url('../fonts/icomoon2.eot?#iefix') format('embedded-opentype'),
+				url('../fonts/icomoon2.woff') format('woff'),
+				url('../fonts/icomoon2.ttf') format('truetype'),
+				url('../fonts/icomoon2.svg#icomoon') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
+
+		body {
+				font-family: Aileron-Light, "Myriad Set Pro","Lucida Grande","Helvetica Neue","Helvetica","Arial","Verdana","sans-serif";
+				color: #fff;
+				font-size: 0.9em;
+				font-weight: 300;
+			background:  rgb(14, 131, 205);
+		}
+
+		a {
+			color: #fff;
+			text-decoration: none;
+			font-weight: 500;
+			letter-spacing: 2px;
+			padding: 0 5px;
+			text-transform: uppercase;
+			font-size: 80%;
+		}
+
+		a:hover, a:focus {
+			color: #fff;
+		}
+
+		#container {height: 100%; padding: 20px 40px 20px 20px; background:  rgb(14, 131, 205)}
+
+		h1,h2,h3{font-family: Aileron-Thin, "Myriad Set Pro","Lucida Grande","Helvetica Neue","Helvetica","Arial","Verdana","sans-serif";
+}
+		h1 {font-size: 4em; font-weight: 300;}
+		h2 {font-size: 3em; font-weight: 300;}
+		h3 {font-size: 1.4em; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 10px 0; }
+		p {padding-bottom: 15px; font-size: 1.7em; line-height: 1.8;
+		}
+		p2 {padding-bottom: 15px; font-size: 1.7em; line-height: 1.8;
+			border: none;
+			padding: 0.6em 1.2em;
+			background: rgb(61, 169, 251);
+			color: #fff;
+			font-family: Aileron-Light, "Myriad Set Pro","Lucida Grande","Helvetica Neue","Helvetica","Arial","Verdana","sans-serif";
+			letter-spacing: 1px;
+			text-transform: none;
+			cursor: pointer;
+			display: inline-block;
+			margin: 3px 2px;
+			border-radius: 2px;}
+
+		/* Custom content */
+
+		.bl-content p {
+			margin: 0 auto;
+			padding-bottom: 15px;
+			font-size: 1.7em;
+			line-height: 1.8;
+		}
+
+		.bl-content a {
+			color: #fff;
+		}
+
+		.bl-content h2 {
+			font-size: 3em;
+			font-weight: 300;
+			margin: 0 0 20px 0;
+		}
+
+		.bl-content article {
+			padding: 20px 40px 20px 0px;
+		}
+
+		.bl-content article h3 {
+			font-weight: 700;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			margin: 0 0 10px 0;
+			padding-top: 20px;
+			font-size: 1.4em;
+		}
+
+		.bl-content article a {
+			color: rgba(0,0,0,0.2);
+		}
+
+		.bl-content > ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		.bl-content > ul li {
+			display: inline-block;
+			width: 20%;
+			margin: 1%;
+		}
+
+		.bl-content > ul li a {
+			display: block;
+			padding: 0;
+			border: 8px solid rgba(0,0,0,0.1);
+		}
+
+		.bl-content > ul li a img {
+			display: block;
+			max-width: 100%;
+		}
+
+		/* Effect 1: Brackets */
+		.cl-effect-1 a::before,
+		.cl-effect-1 a::after {
+			display: inline-block;
+			opacity: 0;
+			-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+			-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+			transition: transform 0.3s, opacity 0.2s;
+		}
+
+		.cl-effect-1 a::before {
+			margin-right: 10px;
+			content: '[';
+			-webkit-transform: translateX(20px);
+			-moz-transform: translateX(20px);
+			transform: translateX(20px);
+		}
+
+		.cl-effect-1 a::after {
+			margin-left: 10px;
+			content: ']';
+			-webkit-transform: translateX(-20px);
+			-moz-transform: translateX(-20px);
+			transform: translateX(-20px);
+		}
+
+		.cl-effect-1 a:hover::before,
+		.cl-effect-1 a:hover::after,
+		.cl-effect-1 a:focus::before,
+		.cl-effect-1 a:focus::after {
+			opacity: 1;
+			-webkit-transform: translateX(0px);
+			-moz-transform: translateX(0px);
+			transform: translateX(0px);
+		}
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot');
+	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.ttf') format('truetype'),
+		url('../fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	padding: 0px	 10px;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-circle-cross:before {
+	content: "\e043";
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+</style>
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<script src="js/modernizr.custom.js"></script>
+
+		<title>Stephen Maxwell</title>
+	</head>
+<body>
+	<div id="container">
+		<h2><a href="../index.html"><span class="icon-circle-cross"></span></a></h2>
+			<h1>Interesting links | 5th January 2014</h1>
+
+			<p>Below is a varied collection of the best articles and interesting reads I have found online over the last month or so. Articles marked with a heart I found particularly good. </p>
+
+				<p2 class="cl-effect-1">
+				<a href="http://www.newyorker.com/reporting/2013/12/09/131209fa_fact_parker">The Big Sleep</a> | The New Yorker &#9829;
+				</p2>
+
+				<p2 class="cl-effect-1">
+				<a href="https://www.bighistoryproject.com/bhplive">The Big History Project</a> | Big history Project &#9829;
+				</p2>
+
+				<p2 class="cl-effect-1">
+				<a href="http://mkweb.bcgsc.ca/pi/art/">Round art of &#120587; 	, &#934; and &#101;</a> | Martin Krzywinski &#9829;
+				</p2>
+
+				<p2 class="cl-effect-1">
+				<a href="http://ministryoftype.co.uk/words/article/polish_stamps_of_1963/">Polish Stamps of 1963</a> | Ministry of Type
+				</p2>
+
+				<p2 class="cl-effect-1">
+				<a href="http://books.nationalgeographic.com/map/map-day/index">Fifty Years of Exploration</a> | National Geographic &#9829;
+				</p2>
+
+
+				<p2 class="cl-effect-1">
+				<a href="https://en.m.wikipedia.org/wiki/2013_in_science">2013 in Science</a> | Wikipedia
+				</p2>
+
+				<p2 class="cl-effect-1">
+				<a href="http://nautil.us/blog/the-math-trick-behind-mp3s-jpegs-and-homer-simpsons-face">The Math Trick Behind MP3s, JPEGs, and Homer Simpson&#39;s Face</a> | Nautilus
+				</p2>
+
+				<p2 class="cl-effect-1">
+				<a href="http://blogs.plos.org/onscienceblogs/2013/12/13/microbe-counts-and-transgenerational-epigenetics/">Microbe Counts and Transgenerational Epigenetics</a> | PLOS blogs
+				</p2>
+
+				<p2 class="cl-effect-1">
+				<a href="http://aeon.co/magazine/living-together/the-rise-of-biotechnology-and-the-loss-of-scientific-neutrality">Prometheus Inc</a> | Aeon Magazine
+				</p2>
+
+		    	<p2 class="cl-effect-1">
+				<a href="http://nautil.us/issue/8/home/the-madness-of-the-planets">The Madness of the Planets</a> | Nautilus
+				</p2>
+
+	    		<p2 class="cl-effect-1">
+				<a href="http://moreintelligentlife.com/content/features/anonymous/fish-our-time">A FISH FOR OUR TIME</a> | intelligent life
+				</p2>
+
+                <p2 class="cl-effect-1">
+				<a href="http://www.spiegel.de/international/germany/analysis-of-the-hidden-cost-of-the-german-meat-industry-a-929251.html"> Factory Farming: The True Price of a Pork Chop</a> | Speigel international
+				</p2>
+
+				<p2 class="cl-effect-1">
+				<a href="http://www.rollingstone.com/feature/belly-beast-meat-factory-farms-animal-activists"> In the Belly of the Beast</a> | RollingStone
+				</p2>
+
+
+	    		<p2 class="cl-effect-1">
+				<a href="http://www.wired.com/wiredscience/2013/12/absurd-creature-of-the-week-the-toad-whose-young-erupt-from-her-skin/">Absurd Creature of the Week: The Frog Whose Young Erupt From Under Its Skin</a> | WIRED
+				</p2>
+
+	    		<p2 class="cl-effect-1">
+				<a href="http://nautil.us/issue/7/waste/evolution-in-a-finite-world">Evolution in a Finite World</a> | Nautilus
+				</p2>
+
+		    	<p2 class="cl-effect-1">
+				<a href="http://blog.matthen.com/">Things of interest in maths and science</a> | Mathen
+				</p2>
+
+				<p2 class="cl-effect-1">
+				<a href="http://genius.cat-v.org/richard-feynman/writtings/letters/wolfram">You don&#39;t understand &#34;ordinary people.&#34; &#8211; Richard P. Feynman to Stephen Wolfram</a> | cat-v
+				</p2>
+
+	</div>
+</body>
+</html

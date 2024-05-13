@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel>
+<title>Stephen Maxwell</title>
+<link>http://stephenmaxwell.me/</link>
+<description>My blog</description>
+<item>
+<title>History of here</title>
+<link>http://stephenmaxwell.me/blog/History_of_here.html</link>
+<guid>http://stephenmaxwell.me/blog/History_of_here.html</guid>
+<pubDate>08th November 2018</pubDate>
+<description></description>
+</item>
+<item>
+<title>Full disk encryption on OpenBSD 5.8 and 5.9</title>
+<link>http://stephenmaxwell.me/blog/openbsd_encryption.html</link>
+<guid>http://stephenmaxwell.me/blog/openbsd_encryption.html</guid>
+<pubDate>10th April 2016</pubDate>
+<description></description>
+</item>
+<item>
+<title>Alpine and SSL</title>
+<link>http://stephenmaxwell.me/blog/alpine.html</link>
+<guid>http://stephenmaxwell.me/blog/alpine.html</guid>
+<pubDate>18th Sep 2014</pubDate>
+<description></description>
+</item>
+<item>
+<title>On Learning Hiragana</title>
+<link>http://stephenmaxwell.me/blog/hiragana.html</link>
+<guid>http://stephenmaxwell.me/blog/hiragana.html</guid>
+<pubDate>5th May 2014</pubDate>
+<description></description>
+</item>
+<item>
+<title>Interesting links</title>
+<link>http://stephenmaxwell.me/blog/newyear_goodreads.html</link>
+<guid>http://stephenmaxwell.me/blog/newyear_goodreads.html</guid>
+<pubDate>5th January 2014</pubDate>
+<description></description>
+</item>
+<item>
+<title>Good Reads </title>
+<link>http://stephenmaxwell.me/blog/goodreads.html</link>
+<guid>http://stephenmaxwell.me/blog/goodreads.html</guid>
+<pubDate>23rd September 2013</pubDate>
+<description></description>
+</item>
+</channel>
+</rss>

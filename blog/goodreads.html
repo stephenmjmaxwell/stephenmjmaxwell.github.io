@@ -1,0 +1,283 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="shortcut icon" href="img/favicon.ico">
+		<!-- Custom CSS -->
+		<link href="css/clean-blog.css" rel="stylesheet">
+		<style media="screen" type="text/css">
+		@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+		@font-face {
+			font-family: 'icomoon';
+			src:url('../fonts/icomoon2.eot');
+			src:url('../fonts/icomoon2.eot?#iefix') format('embedded-opentype'),
+				url('../fonts/icomoon2.woff') format('woff'),
+				url('../fonts/icomoon2.ttf') format('truetype'),
+				url('../fonts/icomoon2.svg#icomoon') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
+
+		body {
+				font-family: Aileron-Light, "Myriad Set Pro","Lucida Grande","Helvetica Neue","Helvetica","Arial","Verdana","sans-serif";
+				color: #f2ede3;
+				font-size: 0.9em;
+				font-weight: 300;
+			background: rgb(72,91,110);
+		}
+
+		a {
+			color: #f0f0f0;
+			text-decoration: none;
+			font-weight: 500;
+			letter-spacing: 2px;
+			padding: 0 5px;
+			text-transform: uppercase;
+			font-size: 80%;
+		}
+
+		a:hover, a:focus {
+			color: #fff;
+		}
+
+		#container {height: 100%; padding: 20px 40px 20px 20px; background: rgb(72,91,110)}
+
+		h1,h2,h3{font-family: Aileron-Thin, "Myriad Set Pro","Lucida Grande","Helvetica Neue","Helvetica","Arial","Verdana","sans-serif";
+}
+h1 {font-size: 4em; font-weight: 300;}
+
+		h2 {font-size: 3em; font-weight: 300;}
+		h3 {font-size: 1.4em; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 10px 0; }
+		p {padding-bottom: 15px; font-size: 1.7em; line-height: 1.8;
+		}
+		p2 {padding-bottom: 15px; font-size: 1.7em; line-height: 1.8;
+			border: none;
+			padding: 0.6em 1.2em;
+			background: #ed4e6e;
+			color: #fff;
+			font-family: Aileron-Light, "Myriad Set Pro","Lucida Grande","Helvetica Neue","Helvetica","Arial","Verdana","sans-serif";
+			letter-spacing: 1px;
+			text-transform: none;
+			cursor: pointer;
+			display: inline-block;
+			margin: 3px 2px;
+			border-radius: 2px;}
+
+		/* Custom content */
+
+		.bl-content p {
+			margin: 0 auto;
+			padding-bottom: 15px;
+			font-size: 1.7em;
+			line-height: 1.8;
+		}
+
+		.bl-content h2 {
+			font-size: 3em;
+			font-weight: 300;
+			margin: 0 0 20px 0;
+		}
+
+		.bl-content article {
+			padding: 20px 40px 20px 0px;
+		}
+
+		.bl-content article h3 {
+			font-weight: 700;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			margin: 0 0 10px 0;
+			padding-top: 20px;
+			font-size: 1.4em;
+		}
+
+		.bl-content article a {
+			color: rgba(0,0,0,0.2);
+		}
+
+		.bl-content > ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		.bl-content > ul li {
+			display: inline-block;
+			width: 20%;
+			margin: 1%;
+		}
+
+		.bl-content > ul li a {
+			display: block;
+			padding: 0;
+			border: 8px solid rgba(0,0,0,0.1);
+		}
+
+		.bl-content > ul li a img {
+			display: block;
+			max-width: 100%;
+		}
+
+		/* Effect 1: Brackets */
+		.cl-effect-1 a::before,
+		.cl-effect-1 a::after {
+			display: inline-block;
+			opacity: 0;
+			-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+			-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+			transition: transform 0.3s, opacity 0.2s;
+		}
+
+		.cl-effect-1 a::before {
+			margin-right: 10px;
+			content: '[';
+			-webkit-transform: translateX(20px);
+			-moz-transform: translateX(20px);
+			transform: translateX(20px);
+		}
+
+		.cl-effect-1 a::after {
+			margin-left: 10px;
+			content: ']';
+			-webkit-transform: translateX(-20px);
+			-moz-transform: translateX(-20px);
+			transform: translateX(-20px);
+		}
+
+		.cl-effect-1 a:hover::before,
+		.cl-effect-1 a:hover::after,
+		.cl-effect-1 a:focus::before,
+		.cl-effect-1 a:focus::after {
+			opacity: 1;
+			-webkit-transform: translateX(0px);
+			-moz-transform: translateX(0px);
+			transform: translateX(0px);
+		}
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot');
+	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.ttf') format('truetype'),
+		url('../fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	padding: 0px	 10px;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-circle-cross:before {
+	content: "\e043";
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+</style>
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<script src="js/modernizr.custom.js"></script>
+
+		<title>Stephen Maxwell</title>
+	</head>
+<body>
+	<div id="container">
+		<h2><a href="../index.html"><span class="icon-circle-cross"></span></a></h2>
+			<h1>Interesting links | 23rd September 2013</h1>
+
+			<p>Below is a varied collection of the best articles and interesting reads I have found online over the last month or so. Articles marked with a heart I found particularly good. </p>
+
+				<p2 class="cl-effect-1">
+				<a href="https://www.simonsfoundation.org/quanta/20130917-a-jewel-at-the-heart-of-quantum-physics/">A Jewel at the Heart of Quantum Physics</a> | Quanta Magazine
+				</p2>
+
+				<p2 class="cl-effect-1">
+				<a href="http://ngm.nationalgeographic.com/2013/10/conflict-minerals/gettleman-text">Conflict Minerals</a> | National Geographic
+				</p2>
+
+				<p2 class="cl-effect-1">
+				<a href="http://apps.seattletimes.com/reports/sea-change/2013/sep/11/pacific-ocean-perilous-turn-overview/">The Pacifics Perilous Turn</a> | The Seattle Times &#9829;
+				</p2>
+
+				<p2 class="cl-effect-1">
+				<a href="http://moreintelligentlife.com/content/features/anonymous/sleeping-enemy?page=full">Sleeping with the enemy</a> | Intelligent Life
+				</p2>
+
+
+
+				<p2 class="cl-effect-1">
+				<a href="http://m.sciencemag.org/content/341/6151/1158.full">In Situ Observations of Interstellar Plasma With Voyager 1</a> | Science Magazine
+				</p2>
+
+				<p2 class="cl-effect-1">
+				<a href="http://www.nybooks.com/articles/archives/2013/sep/26/jellyfish-theyre-taking-over/?pagination=false">They&#39;re Taking Over!</a> | The New York Review of Books &#9829;
+				</p2>
+
+				<p2 class="cl-effect-1">
+				<a href="http://www.oxfordamerican.org/articles/2013/aug/26/issue-82-secret-life-nuns/">Issue 82: The Secret Life of Nuns</a> | Oxford American
+				</p2>
+
+				<p2 class="cl-effect-1">
+				<a href="http://www.nature.com/news/taxonomy-the-spy-who-loved-frogs-1.13710#/">Taxonomy: The spy who loved frogs</a> | Nature
+				</p2>
+
+				<p2 class="cl-effect-1">
+				<a href="http://www.rollingstone.com/feature/the-geeks-on-the-frontlines">The Geeks on the frontlines</a> | Rolling Stone
+				</p2>
+
+				<p2 class="cl-effect-1">
+				<a href="http://www.youtube.com/watch?v=drMuQqLLEe0#t=29">Neil Gaiman on Writing</a> | Youtube video from The Nerdist Podcast
+				</p2>
+
+				<p2 class="cl-effect-1">
+				<a href="http://www.futuretech.ox.ac.uk/future-employment-how-susceptible-are-jobs-computerisation-oms-working-paper-dr-carl-benedikt-frey-m">The Future of Employment: How Susceptible are Jobs to Computerisation?</a> | Paper from Oxford Martin Programme on the Impacts of Future Technology
+				</p2>
+
+				<p2 class="cl-effect-1">
+				<a href="http://www.linuxuser.co.uk/features/replacing-x-waylands-rise">Replacing X &#8722; Wayland&#39;s Rise </a> | Linux User
+				</p2>
+
+				<p2 class="cl-effect-1">
+				<a href="http://www.newyorker.com/reporting/2013/09/16/130916fa_fact_lizza?currentPage=all">The President and the Pipeline</a> | The New Yorker
+				</p2>
+
+				<p2 class="cl-effect-1">
+				<a href="http://www.newyorker.com/online/blogs/elements/2013/09/the-moral-dilemmas-of-doctors-during-disaster.html">The Moral Dilemmas of Doctors During Disaster</a> | The New Yorker
+				</p2>
+
+				<p2 class="cl-effect-1">
+				<a href="http://lareviewofbooks.org/essay/a-moderation-manifesto/">A Moderation Manifesto by Karol Edward So&#0322;tan</a> | Los Angeles Review of Books
+				</p2>
+
+				<p2 class="cl-effect-1">
+				<a href="http://www.theawl.com/2013/09/quiet-enjoyment-twitter-and-the-void">Twitter And The Death Of Quiet Enjoyment</a> | The Awl
+				</p2>
+
+				<p2 class="cl-effect-1">
+				<a href="http://www.theguardian.com/lifeandstyle/wordofmouth/2013/sep/13/civet-coffee-cut-the-crap">Civet coffee: why it's time to cut the crap</a> | The Guardian
+				</p2>
+
+				<p2 class="cl-effect-1">
+				<a href="http://www.plosone.org/article/info:doi/10.1371/journal.pone.0075107">Inducible CYP2J2 and Its Product 11,12-EET Promotes Bacterial Phagocytosis: A Role for CYP2J2 Deficiency in the Pathogenesis of Crohn&#39;s Disease?</a> | PLOS ONE 				</p2>
+
+				<p2 class="cl-effect-1">
+				<a href="http://www.cell.com/current-biology/retrieve/pii/S0960982212015072?script=true">Dung Beetles Use the Milky Way for Orientation</a> | Current Biology
+				</p2>
+
+	</div>
+</body>
+</html

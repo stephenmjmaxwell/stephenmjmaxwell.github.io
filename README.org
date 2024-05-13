@@ -1,1 +1,0 @@
-* This is my personal blog Powered by Emacs [[https://orgmode.org/][org-mode]] and [[https://github.com/marsmining/ox-twbs][ox-twbs]]. 

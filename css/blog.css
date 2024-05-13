@@ -1,0 +1,288 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot');
+	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.ttf') format('truetype'),
+		url('../fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	padding: 0px	 10px;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-twitter:before {
+	content: "\e76d";
+}
+.icon-flickr:before {
+	content: "\e779";
+}
+.icon-github3:before {
+	content: "\e78a";
+}
+.icon-books:before {
+	content: "\e620";
+}
+.icon-circle-cross:before {
+	content: "\e043";
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+.bl-icon-close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+	z-index: 100;
+	opacity: 0;
+	pointer-events: none;
+}
+
+@font-face {
+font-family: Aileron-Black;
+src: url('../fonts/Aileron-Black.otf') format("opentype");
+}
+@font-face {
+font-family: Aileron-BlackItalic;
+src: url('../fonts/Aileron-BlackItalic.otf') format("opentype");
+}
+@font-face {
+font-family: Aileron-Bold;
+src: url('../fonts/Aileron-Bold.otf') format("opentype");
+}
+@font-face {
+font-family: Aileron-BoldItalic;
+src: url('../fonts/Aileron-BoldItalic.otf') format("opentype");
+}
+@font-face {
+font-family: Aileron-Heavy;
+src: url('../fonts/Aileron-Heavy.otf') format("opentype");
+}
+@font-face {
+font-family: Aileron-HeavyItalic;
+src: url('../fonts/Aileron-HeavyItalic.otf') format("opentype");
+}
+@font-face {
+font-family: Aileron-Italic;
+src: url('../fonts/Aileron-Italic.otf') format("opentype");
+}
+@font-face {
+font-family: Aileron-Light;
+src: url('../fonts/Aileron-Light.otf') format("opentype");
+}
+@font-face {
+font-family: Aileron-LightItalic;
+src: url('../fonts/Aileron-LightItalic.otf') format("opentype");
+}
+@font-face {
+font-family: Aileron-Regular;
+src: url('../fonts/Aileron-Regular.otf') format("opentype");
+}
+@font-face {
+font-family: Aileron-SemiBold;
+src: url('../fonts/Aileron-SemiBold.otf') format("opentype");
+}
+@font-face {
+font-family: Aileron-SemiBoldItalic;
+src: url('../fonts/Aileron-SemiBoldItalic.otf') format("opentype");
+}
+@font-face {
+font-family: Aileron-Thin;
+src: url('../fonts/Aileron-Thin.otf') format("opentype");
+}
+@font-face {
+font-family: Aileron-ThinItalic;
+src: url('../fonts/Aileron-ThinItalic.otf') format("opentype");
+}
+@font-face {
+font-family: Aileron-UltraLight;
+src: url('../fonts/Aileron-UltraLight.otf') format("opentype");
+}
+@font-face {
+font-family: Aileron-UltraLightItalic;
+src: url('../fonts/Aileron-UltraLightItalic.otf') format("opentype");
+}
+
+
+body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
+
+body {
+    font-family: Aileron-Light, "Myriad Set Pro","Lucida Grande","Helvetica Neue","Helvetica","Arial","Verdana","sans-serif";
+    color: #fff;
+    font-size: 0.9em;
+    font-weight: 300;
+	background: rgb(75,190,142);
+	background: linear-gradient(to right, #4BBE8E, #4BBEAB) repeat scroll 0% 0% transparent
+}
+
+.blog-2 {background: rgb(238,68,68);
+}
+
+.blog-3 {background: rgb(13,130,120);
+}
+.blog-4 {background: rgb(72,91,110);
+}
+.blog-5 {background:  rgb(14, 131, 205);
+}
+.blog-6 {background:  #fff;
+}
+.blog-7 {background:  #fff;
+}
+
+a {
+	color: #f0f0f0;
+	text-decoration: none;
+	font-family: Aileron-Regular, "Myriad Set Pro","Lucida Grande","Helvetica Neue","Helvetica","Arial","Verdana","sans-serif";
+	font-weight: 700;
+	letter-spacing: 2px;
+	padding: 0 5px;
+	text-transform: uppercase;
+	font-size: 80%;
+}
+
+a:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
+#container {height: 100%; padding: 20px 40px 20px 20px; background: rgb(75,190,142);
+	background: linear-gradient(to right, #4BBE8E, #4BBEAB) repeat scroll 0% 0% transparent;
+}
+
+
+p2 {padding-bottom: 15px; font-size: 1.7em; line-height: 1.8;
+	border: none;
+	padding: 0.6em 1.2em;
+	background: rgb(61, 169, 251);
+	color: #fff;
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	letter-spacing: 1px;
+	text-transform: none;
+	cursor: pointer;
+	display: inline-block;
+	margin: 3px 2px;
+	border-radius: 2px;}
+
+/* Custom content */
+
+.bl-content p {
+	margin: 0 auto;
+	padding-bottom: 15px;
+	font-size: 1.5em;
+	line-height: 1.45;
+}
+
+.bl-content h1 {
+	font-size: 3.9em;
+	font-weight: 300;
+	margin: 0 0 0 0;
+	text-align: center;
+	font-family: Aileron-Thin, "Myriad Set Pro","Lucida Grande","Helvetica Neue","Helvetica","Arial","Verdana","sans-serif";
+
+}
+
+.bl-content h2 {
+	font-size: 3.0em;
+	font-weight: 300;
+	margin: 0 0 0 0;
+	text-align: center;
+	font-family: Aileron-Thin, "Myriad Set Pro","Lucida Grande","Helvetica Neue","Helvetica","Arial","Verdana","sans-serif";
+
+}
+
+.bl-content article {
+	padding: 20px 40px 20px 0px;
+}
+
+.bl-content article h3 {
+	padding-top: 20px;
+	font-size: 2.0em;
+	font-weight: 300;
+	margin: 0 0 0 0;
+	text-align: center;
+	font-family: Aileron-Thin, "Myriad Set Pro","Lucida Grande","Helvetica Neue","Helvetica","Arial","Verdana","sans-serif";
+
+}
+
+.bl-content article a {
+	color: rgba(0,0,0,0.2);
+}
+
+.bl-content > ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.bl-content > ul li {
+	display: inline-block;
+	width: 20%;
+	margin: 1%;
+}
+
+.bl-content > ul li a {
+	display: block;
+	padding: 0;
+	border: 8px solid rgba(0,0,0,0.1);
+}
+
+.bl-content > ul li a img {
+	display: block;
+	max-width: 100%;
+}
+
+/* Effect 1: Brackets */
+.cl-effect-1 a::before,
+.cl-effect-1 a::after {
+	display: inline-block;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+.cl-effect-1 a::before {
+	margin-right: 10px;
+	content: '[';
+	-webkit-transform: translateX(20px);
+	-moz-transform: translateX(20px);
+	transform: translateX(20px);
+}
+
+.cl-effect-1 a::after {
+	margin-left: 10px;
+	content: ']';
+	-webkit-transform: translateX(-20px);
+	-moz-transform: translateX(-20px);
+	transform: translateX(-20px);
+}
+
+.cl-effect-1 a:hover::before,
+.cl-effect-1 a:hover::after,
+.cl-effect-1 a:focus::before,
+.cl-effect-1 a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+}
+
+pre {
+        white-space: pre-wrap;
+    }
